@@ -1,0 +1,29 @@
+{
+  "name": "OST",
+  "version": "0.0.1",
+  "private": "true",
+  "description": "Webapp to support observers during trials, exercises or tabletops.",
+  "main": "index.js",
+  "scripts": {
+    "clean": "pnpm recursive run cleanup",
+    "start": "pnpm recursive run dev",
+    "build:domain": "pnpm recursive run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ci.tno.nl/gitlab/erik.vullings-tno/projectboard.git"
+  },
+  "keywords": [
+    "social",
+    "platform"
+  ],
+  "author": "Erik Vullings <erik.vullings@tno.nl> (http://www.tno.nl)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://ci.tno.nl/gitlab/erik.vullings-tno/projectboard/issues"
+  },
+  "homepage": "https://ci.tno.nl/gitlab/erik.vullings-tno/projectboard#readme",
+  "devDependencies": {
+    "pnpm": "^5.18.1"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collections": {
+    "users": {
+      "jsonImport": "../../output/employees.json",
+      "unique": ["id"],
+      "indices": ["pcm", "keywords"]
+    },
+    "projects": {
+      "jsonImport": "../../output/projects.json",
+      "unique": ["id"],
+      "indices": ["name"]
+    },
+    "publications": {
+      "jsonImport": "../../output/newest_publications.json",
+      "unique": ["id"],
+      "indices": ["name"]
+    }
+  }
+}

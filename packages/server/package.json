@@ -1,0 +1,46 @@
+{
+  "name": "ost-server",
+  "version": "0.0.1",
+  "private": "true",
+  "description": "REST server for OST dashboard.",
+  "main": "index.js",
+  "scripts": {
+    "link": "pnpm link project-board-shared",
+    "clean": "rimraf ./dist",
+    "cleanup": "npm run clean",
+    "serve": "node -r dotenv/config node_modules/rest-easy-loki/dist/cli.js --config ./config.json",
+    "serve:old": "node -r dotenv/config ./dist/server.js",
+    "dev": "npm start",
+    "dev:old": "tsc-watch --outDir ./dist --onSuccess \"node -r dotenv/config ./dist/server.js\" --onFailure \"echo Beep! Compilation Failed\" --compiler typescript/bin/tsc",
+    "build": "tsc -b",
+    "update": "rimraf db.old && mv db db.old && mkdir db",
+    "update:local": "rimraf db.old && mv db db.old && mkdir db && npm start",
+    "start": "node node_modules/rest-easy-loki/dist/cli.js -u uploads --config ./config.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ci.tno.nl/gitlab/erik.vullings-tno/projectboard.git"
+  },
+  "keywords": [
+    "observer",
+    "tool",
+    "tabletop",
+    "support",
+    "questionnaire"
+  ],
+  "author": "Erik Vullings <erik.vullings@tno.nl> (http://www.tno.nl)",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.1",
+    "rest-easy-loki": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/koa": "2.11.6",
+    "@types/node": "^14.14.31",
+    "@types/node-fetch": "1.6.9",
+    "rimraf": "^3.0.2",
+    "tsc-watch": "^4.2.9",
+    "typescript": "^4.2.2"
+  }
+}
