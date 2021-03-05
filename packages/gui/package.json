@@ -37,7 +37,6 @@
     "materialize-css": "^1.0.0",
     "mithril": "^2.0.4",
     "mithril-materialized": "^0.17.1",
-    "slimdown-js": "^0.3.3",
     "mithril-ui-form": "^0.9.1",
     "leaflet": "^1.7.1",
     "leaflet-draw": "^1.0.4"
